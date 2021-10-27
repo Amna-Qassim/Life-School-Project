@@ -1,0 +1,73 @@
+/* Base Rules*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+  font-size:  20px;
+  line-height: 30px;
+  color: #6c757d
+}
+
+/* Navigation */
+nav.custom-nav {
+  background-color: rgba(0, 0, 0, 0.74);
+  padding: 20px 0;
+}
+
+nav .navbar-brand {
+  font-size: 30px;
+  color: #fff;
+}
+
+nav .navbar-nav li a {
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+}
+
+nav .navbar-nav li {
+  margin-left: 15px;
+}
+
+.navbar .humburger {
+  color: #fff
+}
+
+/* Main section */
+.about {
+  margin-top: 100px;
+}
+
+.about-img {
+  margin-left: 50px;
+  margin-top: 65px;
+}
+
+.about-img img {
+  width: 450px;
+
+}
+
+/* footer */
+.footer {
+  margin-top: 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.);
+
+}
+.style-color {
+  color: #d2333c !important;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
