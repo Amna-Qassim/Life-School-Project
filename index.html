@@ -53,7 +53,6 @@
     </div>  
   </div>
 
-
   <!-- start popup -->
   <div class="popup">
     <div class="inner">
@@ -92,7 +91,7 @@
           </div>
         </div>
         <div class="col-12">
-          <button type="submit" class="btn btn-primary">Register</button>
+          <button type="submit" class="btn btn-primary" onclick="writeData()">Register</button>
         </div>
       </form>
       <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
@@ -116,9 +115,44 @@
         </ul>
       </footer>
     </div>
-</div>
+  </div>
+  <!-- End footer -->
+
+  <script  defer src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDQoKb9Coa8BPTJ8f36yMA8LNVHBwzVV1U",
+      authDomain: "pomo-a7b98.firebaseapp.com",
+      projectId: "pomo-a7b98",
+      storageBucket: "pomo-a7b98.appspot.com",
+      messagingSenderId: "888163911722",
+      appId: "1:888163911722:web:6acfae6580c46cdc8edb53"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    function writeData() {
+      firebase.database().ref("User").set({
+        firstname: document.getElementsById("firstName").value,
+        lastname: document.getElementsById("lasttName").value,
+        email: document.getElementsById("inputEmail4").value,
+        password: document.getElementsById("inputPassword4").value,
+        city: document.getElementsById("inputCity").value,
+        check: document.getElementsById("gridCheck").value
+        
+      });
+    }
+  </script>
   <script src="lib\jquery-3.6.0.min.js"></script>
   <script src="lib\js\bootstrap.min.js"></script>
   <script src="js/app.js"></script>
+
 </body>
 </html>
