@@ -47,8 +47,8 @@ nav .navbar-nav li {
 }
 
 .about-img {
-  margin-left: 50px;
-  margin-top: 65px;
+  /* margin-left: 50px; */
+  margin-top: 50px;
 }
 
 .about-img img {
@@ -73,11 +73,11 @@ nav .navbar-nav li {
   border: 1px solid #ccc;
   padding: 20px;
   width: 550px;
-  height: 450px;
+  height: 500px;
   left: 31%;
   position: fixed;
   top: 50%;
-  margin-top: -200px;
+  margin-top: -240px;
 }
 
 .popup .inner .close {
@@ -111,3 +111,19 @@ nav .navbar-nav li {
   fill: currentColor;
 }
 /* End Footer */
+
+/* Media for small devices */
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { }
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { }
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { }
+
+/* // `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { }
+
+/* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {  }
