@@ -24,28 +24,29 @@
     </symbol>
   </svg>
   <!-- ----------------------------------------------------------- -->
-  <nav class="navbar navbar-expand-lg  custom-nav">
+  <nav class="navbar navbar-expand-lg custom-nav">
     <div class="container-fluid">
-      <div class="col">
-        <a href="#" class="navbar-brand"><span class="style-color">:)</span>:) Life School :)<span class="style-color">:)</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarId">
-          <span><i class="fas fa-bars humburger"></i></span>
-        </button>
-      </div>
-
-      <div class="collapse navbar-collapse col" id="navbarId">
-        <ul class="navbar-nav ms-auto">
-          <li class="navbar-item"><a href="" class="nav-link">Home</a></li>
-          <li class="navbar-item"><a href="" class="nav-link">About</a></li>
-          <li class="navbar-item"><a href="" class="nav-link">Register</a></li>
-          <li class="navbar-item"><a href="" class="nav-link">Contact</a></li>
-        </ul>
-      </div>
+        <div class="col-md">
+          <a href="#" class="navbar-brand"><span class="style-color">:)</span>:) Life School :)<span class="style-color">:)</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarId">
+            <span><i class="fas fa-bars humburger"></i></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse col-md" id="navbarId">
+          <ul class="navbar-nav ms-auto">
+            <li class="navbar-item"><a href="" class="nav-link">Home</a></li>
+            <li class="navbar-item"><a href="" class="nav-link">About</a></li>
+            <li class="navbar-item"><a href="" class="nav-link">Register</a></li>
+            <li class="navbar-item"><a href="" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
     </div>
   </nav>
   <!-- end nav -->
+
+  <!-- start main section -->
   <div class="container-fluid about">
-    <div class="row about-sec">
+    <div class=" row about-sec">
       <div class="col about-sec">
         <h1>About Us</h1>
         <p>Life is a school to teach us lessons we can't forget it, there is a wise from these lessons, if we take some time to think about all things happening in our life, we will see the wisdom from it, take it easy and have patient to take lessons from all challenges in your life, it's okay if you fall down, take a deep breath and try to stand by yourself and try again with a big smile, you deserve the best things,<b> plz don't give up, YOU CAN DO IT, REMEMBER THAT ALWAYS</b>. Now register to our school to see by yourself ---> It's not about the destination, It's about the journey:)</p>
@@ -56,6 +57,7 @@
       </div>
     </div>  
   </div>
+<!-- end main section -->
 
   <!-- start popup -->
   <div class="popup">
@@ -65,41 +67,41 @@
           <div>
             <h3>Fill This Form For Registeration:</h3>
           </div>
-          <div class="col">
+          <div class="col-md">
             <label for="firstName" class="form-label">First Name</label>
             <input type="text" class="form-control" id="firstName" aria-label="First name">
           </div>
-          <div class="col">
+          <div class="col-md">
             <label for="lastName" class="form-label">Last Name</label>
             <input type="text" class="form-control" id="lastName" aria-label="Last name">
           </div>
         </div>
         <div class="row g-3">
-          <div class="col">
+          <div class="col-md">
             <label for="inputEmail4" class="form-label">Email</label>
             <input type="email" class="form-control" id="inputEmail4">
           </div>
-          <div class="col">
+          <div class="col-md">
             <label for="inputPassword4" class="form-label">Password</label>
             <input type="password" class="form-control" id="inputPassword4">
           </div>
         </div>
         <div class="row g-3">
-          <div class="col-6">
+          <div class="col-md-6">
             <label for="inputCity" class="form-label">City</label>
             <input type="text" class="form-control" id="inputCity">
           </div>
-          <div class="col-12">
-            <div class="form-check">
+          <div class="col-md-12">
+            <div class="form-check mb-3">
               <input class="form-check-input" type="checkbox" id="gridCheck">
               <label class="form-check-label" for="gridCheck">
                 Remember Me!
               </label>
             </div>
           </div>
-      </div>
+        </div>
         <div class="col-12">
-          <button type="submit" class="btn btn-primary" onclick="writeData()">Register</button>
+          <button type="submit" class="btn btn-primary">Register</button>
         </div>
       </form>
       <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
@@ -126,7 +128,7 @@
   </div>
   <!-- End footer -->
 
-  <script  defer src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+  
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
@@ -145,19 +147,11 @@
   
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
-
-    function writeData() {
-      firebase.database().ref("User").set({
-        firstname: document.getElementsById("firstName").value,
-        lastname: document.getElementsById("lasttName").value,
-        email: document.getElementsById("inputEmail4").value,
-        password: document.getElementsById("inputPassword4").value,
-        city: document.getElementsById("inputCity").value,
-        check: document.getElementsById("gridCheck").value
-        
-      });
-    }
   </script>
+  
+  
+    
+  <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
   <script src="lib\jquery-3.6.0.min.js"></script>
   <script src="lib\js\bootstrap.min.js"></script>
   <script src="js/app.js"></script>

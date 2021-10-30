@@ -73,11 +73,11 @@ nav .navbar-nav li {
   border: 1px solid #ccc;
   padding: 20px;
   width: 550px;
-  height: 500px;
+  height: 400px;
   left: 31%;
   position: fixed;
   top: 50%;
-  margin-top: -240px;
+  margin-top: -200px;
 }
 
 .popup .inner .close {
